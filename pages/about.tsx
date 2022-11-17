@@ -1,17 +1,22 @@
 import React from "react";
-import Header from "../common/Header";
-import Footer from "../common/Footer";
-import Navbar from "../common/Navbar";
+import styles from '../styles/About.module.css';
+import Image from "next/image";
+import Head from "next/head";
 
 const About = () => {
     return(
-        <div>
-            <Header />
-            <Navbar />
-            
-            <h1>About Page</h1>
-            <Footer />
+        <>
+        <Head>
+            <title>About Page</title>
+            <meta name="About Description" content="About Content Here" />
+        </Head>
+        <div className="bg-info">
+            <h1 className={styles.about_text}>About Page</h1>
+      
+       <Image src='/imagebg.jpg' width={400} height={200} />
+      
         </div>
+        </>
     )
 }
 
