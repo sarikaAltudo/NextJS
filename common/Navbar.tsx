@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="row">
             <div className="col-12">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <Link className="navbar-brand" href="/"><Image src='/home.jpg' width={30} height={30} /></Link>
+                    <Link className="navbar-brand" href="/"><Image src='/home.jpg' width={30} height={30} alt="About Image" title="About Image"/></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

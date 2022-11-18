@@ -1,6 +1,16 @@
 import React from "react";
 
-const Library = () => {
+export const getStaticProps = () => {
+    //API Call
+    return {
+        props : {
+           footerstatus : true
+        }
+    }
+}
+
+
+const Library = (props:true) => {
     return(
         <div>
             <h1>Library Page</h1>

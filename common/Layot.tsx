@@ -4,15 +4,15 @@ import Footer from "../common/Footer";
 import Navbar from "../common/Navbar";
 
 
-const Layout = ({children}) => {
+const Layout = (props) => {
+    const {children, footerstatus} = props;
     return(
         <>
         <div className="container">
             <Header />
             <Navbar />
-            
             {children}
-            <Footer />
+           {!footerstatus && (<Footer />)} 
         </div>
         </>
     )

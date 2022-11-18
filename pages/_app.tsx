@@ -22,7 +22,7 @@ function App({ Component, pageProps }: AppProps) {
     <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
     <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
     </Head>
-    <Layout>
+    <Layout footerstatus={pageProps.footerstatus}>
       <Component {...pageProps} />
     </Layout>
     </>
