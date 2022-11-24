@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-//SSG - Build
-export const getStaticProps = async () => {
+
+//SSR - Page Visit
+export const getServerSideProps = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
     return {
@@ -10,7 +11,8 @@ export const getStaticProps = async () => {
     }
 }
 
-const Courses = (props) => {
+const Products = (props) => {
+
     const { productData } = props;
     return (
         <div className="row">
@@ -25,7 +27,7 @@ const Courses = (props) => {
                             <h5 className="card-title">{item.title}</h5>
                             <p className="card-text">{item.category}</p>
                             <strong>Price: <span className="text-danger">${item.price}</span></strong>
-                            <div className="mt-2"><Link href={`/batches/${item.id}`} className="btn btn-outline-dark">Go on Detail</Link></div>
+                            <div className="mt-2"><Link href={`/products/${item.id}`} className="btn btn-outline-dark">Product Detail</Link></div>
                         </div>
                     </div>
                 </div>
@@ -35,4 +37,4 @@ const Courses = (props) => {
     )
 }
 
-export default Courses;
+export default Products;
