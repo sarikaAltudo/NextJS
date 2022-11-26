@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-//SSR - Page Visit
-export const getServerSideProps = async () => {
+//SSG - Build
+export const getStaticProps = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const data = await response.json();
     return {
@@ -10,12 +10,11 @@ export const getServerSideProps = async () => {
     }
 }
 
-const Products = (props) => {
-
+const Batches = (props) => {
     const { productData } = props;
     return (
         <div className="row">
-            <h1 className="text_nextjs">courses Page</h1>
+            <h1>courses Page</h1>
             {productData.map(item => (
                 // <div>{item.title}</div>
                 <div className="col-3 mb-3">
@@ -26,7 +25,7 @@ const Products = (props) => {
                             <h5 className="card-title">{item.title}</h5>
                             <p className="card-text">{item.category}</p>
                             <strong>Price: <span className="text-danger">${item.price}</span></strong>
-                            <div className="mt-2"><Link href={`/product/${item.id}`} className="btn btn-outline-dark">Product Detail</Link></div>
+                            <div className="mt-2"><Link href={`/batches/${item.id}`} className="btn btn-outline-dark">Go on Detail</Link></div>
                         </div>
                     </div>
                 </div>
@@ -36,4 +35,4 @@ const Products = (props) => {
     )
 }
 
-export default Products;
+export default Batches;

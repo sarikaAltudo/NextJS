@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
-import styles from '../styles/About.module.css';
+
 import Image from "next/image";
 import Head from "next/head";
+
+import styles from '../styles/About.module.scss';
 
 export const getStaticProps = () => {
     //API Call

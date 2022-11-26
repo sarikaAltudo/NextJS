@@ -1,12 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Login from "../pages/login";
+import Registration from "../pages/registration";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faYoutube,
   faFacebook,
   faTwitter,
-  faInstagram
+  faInstagram,
+  //FaCartPlus
+  
 } from "@fortawesome/free-brands-svg-icons";
 
 const Header = () => {
@@ -28,7 +33,9 @@ const Header = () => {
             <a className="text-muted" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
             </a>
-            <a className="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+            <Link className="btn btn-sm btn-outline-secondary m-1" href="/registration">Registration</Link>
+            <Link className="btn btn-sm btn-outline-secondary m-1" href="/login">Login</Link>
+            <Link className="btn btn-sm btn-outline-secondary m-1" href="#">Logout</Link>
           </div>
         </div>
       </header>

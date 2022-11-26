@@ -1,6 +1,12 @@
 import React from "react";
 
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from "next/link";
+import {
+    faCartPlus,
+    faHeartCirclePlus
+    
+  } from "@fortawesome/free-solid-svg-icons";
 
 //SSG (Static Site Generation) - HTML Pages are built initially
 
@@ -48,8 +54,13 @@ const Year = ({ res }) => {
                 </div>
                 <div className="col-6">
                     <h3>Products : {res.title}</h3>
+                    <h5>Rating : {res.rating.rate}, Count : {res.rating.count}</h5>
                     <p><strong>Price:</strong> {res.price}</p>
                     <p><strong>Category:</strong> {res.category}</p>
+                    <p><strong>Descriptions:</strong> {res.description}</p>
+                    <div><Link className="btn btn-large btn-secondary m-1" href="#"><FontAwesomeIcon icon={faCartPlus} /> Add To Cart</Link>
+                    <Link className="btn btn-large btn-outline-secondary m-1" href="#"><FontAwesomeIcon icon={faHeartCirclePlus} /> Wishlist</Link></div>
+                   
                 </div>
 
             </div>
