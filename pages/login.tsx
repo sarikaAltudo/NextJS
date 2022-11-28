@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 
 const Login = () => {
@@ -21,7 +22,7 @@ const Login = () => {
                         </div>
                         <button type="submit" className="btn btn-lg btn-secondary m-1">Sign in</button>
                         <div className="text-center">
-                            <p>Not a member? <a href="#!">Register</a></p>
+                            <p>Not a member? <Link href="/registration">Register</Link></p>
 
                         </div>
                     </form>
