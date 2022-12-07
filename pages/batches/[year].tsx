@@ -29,7 +29,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const temp = context.params.year;
-    const response = await fetch('https://fakestoreapi.com/products/' + temp);
+    const response = await fetch(process.env.API_URL+temp);
     const data = await response.json();
     return {
         props: {
